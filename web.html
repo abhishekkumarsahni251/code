@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKHU - Premium Makhana</title>
+
+    <!-- CSS: Website ki design -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f5ec;
+            color: #203b2b;
+        }
+
+        header {
+            background: #183d2b;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        .hero {
+            min-height: 430px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 260px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 15px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 13px 24px;
+            background: #d4a64e;
+            color: #183d2b;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .products {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            background: white;
+            width: 280px;
+            padding: 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px #00000012;
+        }
+
+        .product img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 15px 0 8px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .about {
+            padding: 45px 8%;
+            background: #e9e8d8;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #183d2b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 6px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Website ka top section -->
+    <header>
+        <div class="logo">MAKHU</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- Main banner -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p>PURE • CRUNCHY • NATURAL</p>
+
+            <h1>A Better Way to Snack.</h1>
+
+            <p>
+                Discover the taste of premium makhana.
+                Light, crunchy and perfect for your everyday snack time.
+            </p>
+
+            <a href="#products" class="btn">Explore Products</a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1599599810694-b5b37304c041?auto=format&fit=crop&w=800&q=80"
+            alt="Healthy snack"
+        >
+    </section>
+
+    <!-- Products section -->
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+
+        <div class="product-list">
+
+            <div class="product">
+                <img
+                    src="https://images.unsplash.com/photo-1621939514649-280e2aa2f5a0?auto=format&fit=crop&w=600&q=80"
+                    alt="Classic makhana"
+                >
+
+                <h3>Classic Makhana</h3>
+                <p>Simple, crunchy and delicious.</p>
+                <p class="price">₹149 / Pack</p>
+
+                <button class="btn" onclick="orderProduct('Classic Makhana')">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="product">
+                <img
+                    src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80"
+                    alt="Roasted snack"
+                >
+
+                <h3>Roasted Makhana</h3>
+                <p>A tasty snack for your day.</p>
+                <p class="price">₹179 / Pack</p>
+
+                <button class="btn" onclick="orderProduct('Roasted Makhana')">
+                    Order Now
+                </button>
+            </div>
+
+            <div class="product">
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80"
+                    alt="Flavoured snack"
+                >
+
+                <h3>Flavoured Makhana</h3>
+                <p>Enjoy a little extra flavour.</p>
+                <p class="price">₹199 / Pack</p>
+
+                <button class="btn" onclick="orderProduct('Flavoured Makhana')">
+                    Order Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about">
+        <h2>About MAKHU</h2>
+
+        <p>
+            At MAKHU, we believe that good snacks make every day better.
+            Our goal is to bring delicious makhana to your home.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>MAKHU</h2>
+        <p>Good Snacking, Better Living.</p>
+        <p>© 2026 MAKHU. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript: Button ka kaam -->
+    <script>
+        function orderProduct(productName) {
+            alert(
+                "You selected " + productName +
+                ". Contact us to place your order."
+            );
+        }
+    </script>
+
+</body>
+</html>
+
